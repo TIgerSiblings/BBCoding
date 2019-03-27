@@ -78,26 +78,12 @@ void armUp(){
  }
 
 void armDown(){
-
-	set_servo_position(0,514);// up position
-    ao();
-    msleep(500);
-    set_servo_position(0,714);// up position
-    ao();
-    msleep(500);
-    set_servo_position(0,914);// up position
-    ao();
-    msleep(500);
-    set_servo_position(0,1114);// up position
-    ao();
-    msleep(500);
-      set_servo_position(0,1314);// up position
-    ao();
-    msleep(500);
-    set_servo_position(0,1600);
-    ao();
-    msleep(1000);
- }
+ while (get_servo_position (0)<1650)
+      {
+	 set_servo_position(0, (get_setvo_posisiton(0)+50)
+	
+			    }// while
+ }//function
  void cameraRead(){
      camera_open();// connect the camera
      camera_update();
